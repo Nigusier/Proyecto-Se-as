@@ -25,6 +25,6 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
     - name: Run Streamlit
-      run: streamlit run app.py
+      run: streamlit run web_t.py
 
 
