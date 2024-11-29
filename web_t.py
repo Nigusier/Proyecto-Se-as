@@ -23,7 +23,7 @@ st.write("el uso de la inteligencia artifical para enseñar el lenguaje de seña
 
 imagen_1 = Image.open("D:\\Curso IA\\Proyecto de señas\\sign-language-detector-python-master\\señas.jpg")
 imagen_2 = Image.open("D:\\Curso IA\\Proyecto de señas\\sign-language-detector-python-master\\fixis.png")
-
+imagen_3 = Image.open("D:\\Curso IA\\Proyecto de señas\\sign-language-detector-python-master\\matriz.jpg")
 #texto de descripcion 
 
 
@@ -60,6 +60,29 @@ The project "Sign Language Teaching" aims to develop an interactive and educatio
 
 The core of the project is based on a computer vision system implemented with OpenCV and MediaPipe, which captures and processes video images of hand gestures. The collected data is used to train a supervised learning model, specifically a logistic regression classifier, that identifies and predicts the represented signs. The model has been trained with a robust dataset that includes the five vowels and one word from sign language to ensure high accuracy and reliability.            """
         )
+st.title("Descripción")
+
+st.write("""
+    Este proyecto es un detector de lenguaje de señas desarrollado con Python, OpenCV y Mediapipe. El objetivo principal es detectar y reconocer signos de lenguaje de señas utilizando técnicas de visión por computadora.
+
+    **Características Principales:**
+
+    - **Lenguaje de Programación:** Python
+    - **Bibliotecas Utilizadas:** OpenCV, Mediapipe
+
+    **Funcionalidades:**
+
+    - **Recolección de Imágenes:** Utiliza un script `collect_imgs.py` para recolectar imágenes de signos de lenguaje de señas.
+    - **Creación de Conjunto de Datos:** Un script `create_dataset.py` para crear un conjunto de datos a partir de las imágenes recolectadas.
+    - **Entrenamiento del Clasificador:** Un script `train_classifier.py` para entrenar un clasificador utilizando el conjunto de datos creado.
+    - **Inferencia del Clasificador:** Un script `inference_classifier.py` para realizar predicciones en tiempo real.
+
+ El modelo utilizado para este proyecto es un árbol de decisión. Este algoritmo compara rápidamente las entradas con una base de datos de aprendizaje creada a partir de un conjunto de datos guardados. La siguiente matriz de confusión muestra las validaciones realizadas por el algoritmo para encontrar similitudes entre la captura en tiempo real de una seña y el modelo entrenado
+
+
+""")
+
+st.image(imagen_3, caption='Fixis', use_container_width=True)
 
 
 st.title("¡Vamos a la práctica!")
