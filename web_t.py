@@ -82,7 +82,7 @@ st.write("""
 
 """)
 
-st.image(imagen_3, caption='Fixis', use_container_width=True)
+st.image(imagen_3, caption='Matriz de confusión', use_container_width=True)
 
 
 st.title("¡Vamos a la práctica!")
