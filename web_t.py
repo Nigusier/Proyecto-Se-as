@@ -36,9 +36,9 @@ labels_dict = {0: 'A', 1: 'E', 2: 'i', 3: 'U', 4: 'O', 5: 'Fixis'}
 st.title("Enseñanza del Lenguaje de Señas")
 st.write("el uso de la inteligencia artifical para enseñar el lenguaje de señas.")
 
-imagen_1 = Image.open("D:\\Curso IA\\Proyecto de señas\\sign-language-detector-python-master\\señas.jpg")
-imagen_2 = Image.open("D:\\Curso IA\\Proyecto de señas\\sign-language-detector-python-master\\fixis.png")
-imagen_3 = Image.open("D:\\Curso IA\\Proyecto de señas\\sign-language-detector-python-master\\matriz.jpg")
+imagen_1 = Image.open(".\señas.jpg")
+imagen_2 = Image.open(".\fixis.png")
+imagen_3 = Image.open(".\matriz.jpg")
 #texto de descripcion 
 
 
