@@ -4,6 +4,7 @@ import mediapipe as mp
 import numpy as np
 import streamlit as st
 from PIL import Image
+import os
 
 # Cargar el modelo
 # Verificar si el archivo existe
