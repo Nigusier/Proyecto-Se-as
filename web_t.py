@@ -9,6 +9,11 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, confusion_matrix
 
+
+#activar camara 
+enable = st.checkbox("Enable camera")
+
+
 # Cargar el modelo
 # Verificar si el archivo existe
 if os.path.exists('./model.p'):
@@ -167,8 +172,7 @@ def process_frame():
                         cv2.LINE_AA)
 
     return frame
-#activar camara 
-enable = st.checkbox("Enable camera")
+
 
 # Mostrar el video
 stframe = st.empty()
