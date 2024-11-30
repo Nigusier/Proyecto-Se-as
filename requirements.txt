@@ -2,5 +2,5 @@ setuptools==75.6.0
 streamlit
 scikit-learn
 pillow
-opencv-python==4.5.3.56
+opencv-python-headless
 mediapipe==0.8.9.1
