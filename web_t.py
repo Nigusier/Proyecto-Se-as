@@ -1,5 +1,4 @@
 import pickle
-import cv2
 import mediapipe as mp
 import numpy as np
 import streamlit as st
@@ -9,29 +8,6 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, confusion_matrix
 
-# Cargar el modelo
-# Verificar si el archivo existe
-if os.path.exists('./model.p'):
-    # Intentar cargar el archivo con pickle
-    try:
-        with open('./model.p', 'rb') as model_file:
-            model_dict = pickle.load(model_file)
-    except Exception as e:
-        st.error(f"Error al cargar el archivo de modelo: {e}")
-else:
-    st.error("El archivo 'model.p' no se encontró en el directorio especificado.")
-
-#definicion del modelo a usar 
-model = model_dict['model']
-
-# Inicializar VideoCapture y MediaPipe
-cap = cv2.VideoCapture(0)
-mp_hands = mp.solutions.hands
-mp_drawing = mp.solutions.drawing_utils
-mp_drawing_styles = mp.solutions.drawing_styles
-
-hands = mp_hands.Hands(static_image_mode=True, min_detection_confidence=0.3)
-labels_dict = {0: 'A', 1: 'E', 2: 'i', 3: 'U', 4: 'O', 5: 'Fixis'}
 
 st.title("Enseñanza del Lenguaje de Señas")
 st.write("el uso de la inteligencia artifical para enseñar el lenguaje de señas.")
@@ -115,9 +91,4 @@ with st.container():
     with col2:
         st.image(imagen_1, caption='Vocales A,E,I,O,U', use_container_width=True)
 
-
-
-
-
-# Función para procesar el video
 
