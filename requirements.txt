@@ -4,3 +4,4 @@ setuptools==75.6.0
 streamlit
 python_version < 3.12
 opencv-python-headless
+scikit-learn
