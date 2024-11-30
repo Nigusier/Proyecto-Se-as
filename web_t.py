@@ -91,4 +91,12 @@ with st.container():
     with col2:
         st.image(imagen_1, caption='Vocales A,E,I,O,U', use_container_width=True)
 
+#solicitud de video 
+
+enable = st.checkbox("Enable camera")
+picture = st.camera_input("Take a picture", disabled=not enable)
+
+if picture:
+    st.image(picture)
+
 
