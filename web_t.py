@@ -167,6 +167,8 @@ def process_frame():
                         cv2.LINE_AA)
 
     return frame
+#activar camara 
+enable = st.checkbox("Enable camera")
 
 # Mostrar el video
 stframe = st.empty()
