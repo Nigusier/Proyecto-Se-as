@@ -6,7 +6,18 @@ import streamlit as st
 from PIL import Image
 
 # Cargar el modelo
-model_dict = pickle.load(open('./model.p', 'rb'))
+# Verificar si el archivo existe
+if os.path.exists('./model.p'):
+    # Intentar cargar el archivo con pickle
+    try:
+        with open('./model.p', 'rb') as model_file:
+            model_dict = pickle.load(model_file)
+    except Exception as e:
+        st.error(f"Error al cargar el archivo de modelo: {e}")
+else:
+    st.error("El archivo 'model.p' no se encontró en el directorio especificado.")
+
+#definicion del modelo a usar 
 model = model_dict['model']
 
 # Inicializar VideoCapture y MediaPipe
