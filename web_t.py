@@ -1,5 +1,4 @@
 import pickle
-import cv2
 import mediapipe as mp
 import numpy as np
 import streamlit as st
@@ -8,7 +7,7 @@ import os
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, confusion_matrix
-
+import cv2
 
 #activar camara 
 enable = st.checkbox("Enable camera")
