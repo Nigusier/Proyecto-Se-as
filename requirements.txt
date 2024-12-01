@@ -4,3 +4,6 @@ scikit-learn
 pillow
 opencv-python-headless
 mediapipe==0.10.18
+sudo apt-get update
+sudo apt-get install -y libgl1-mesa-dev
+
