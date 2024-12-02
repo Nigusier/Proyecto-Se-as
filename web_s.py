@@ -86,7 +86,7 @@ class VideoTransformer(VideoTransformerBase):
         return img
 
 # Streamlit-webrtc para capturar video en tiempo real
-webrtc_streamer(key="example", video_transformer_factory=VideoTransformer)
+webrtc_streamer(key="example", video_processor_factory=VideoTransformer)
 
 # Imágenes de referencia
 st.write("A continuación verás dos imágenes que te servirán de guía para poner en práctica el lenguaje de señas.")
